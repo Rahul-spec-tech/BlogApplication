@@ -77,5 +77,7 @@ public class BlogPost {
 
 	public void setAuthor(User author) {
 		this.author = author;
-	}   
+	}
+
+	   
 }
