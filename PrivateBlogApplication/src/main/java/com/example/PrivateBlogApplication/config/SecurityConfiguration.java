@@ -39,7 +39,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(registry -> {
                     registry.requestMatchers("/home", "/register/**").permitAll();
                     registry.requestMatchers("/private/**").hasRole("PRIVATE");
-                    registry.requestMatchers("/public/**").hasRole("public");
+                    registry.requestMatchers("/public/**").hasRole("PUBLIC");
                     registry.anyRequest().authenticated();
                 })
                 .formLogin(httpSecurityFormLoginConfigurer -> {
